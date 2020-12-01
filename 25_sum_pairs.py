@@ -26,12 +26,11 @@ def sum_pairs(nums, goal):
     for num in nums:
         diff = goal - num
 
-        if diff in nums:
-            if diff == num and nums.count(num) > 1:
+        if diff in nums and diff != num:
+            pairs.append((num, diff))
+        elif diff in nums and diff == num:
+            if nums.count(num) > 1:
                 pairs.append((num, diff))
-            else:
-                pairs.append((num, diff))
-    
-    print(pairs)
 
+    # still need to work on
         

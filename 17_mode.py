@@ -12,19 +12,24 @@ def mode(nums):
         2
     """
 
-    num_dict = {}
+    num_freq = {}
 
     for num in nums:
-        num_dict[num] = num_dict.get(num, 0) + 1
+    num_freq[num] =num_freq.get(num, 0) + 1
 
     max_num = 0
     max_count = 0
-
-    for (num, count) in num_dict.items():
-        if count > max_count:
-            max_count = count
-            max_num = num
     
-    return max_num
-        
+    def val_by_key(key):
+        return num_freq[key]
+
+    return max(nums, key=val_by_key)
+
+
+
+
+
+
+
+ 
        
