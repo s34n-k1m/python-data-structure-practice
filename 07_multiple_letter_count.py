@@ -15,7 +15,7 @@ def multiple_letter_count(phrase):
 
     for letter in phrase:
         phrase_dict[letter] = phrase_dict[letter] + 1 if letter in phrase_dict.keys() else 1
-
+        phrase_dict[letter] = phrase_dict.get(letter, 0) + 1 
     return phrase_dict
 
     

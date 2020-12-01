@@ -23,4 +23,5 @@ def is_palindrome(phrase):
     """
 
     no_space_phrase = ''.join(phrase.lower().split(' '))
+    no_space_phrase = phrase.lower().replace(' ', '')
     return no_space_phrase == no_space_phrase[::-1]
